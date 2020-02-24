@@ -1,5 +1,4 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
 import filter from 'lodash/filter';
 import { Stone } from './Stone';
 
@@ -10,9 +9,5 @@ export const Stones = ({ stones = [], group, onStoneSelect }) => {
 		}
 	};
 
-	return (
-		<Container>
-			{stones.map((stoneData) => <Stone key={stoneData.id} stoneData={stoneData} onClick={onClick} />)}
-		</Container>
-	);
+	return stones.map((stoneData) => <Stone key={stoneData.id} stoneData={stoneData} onClick={onClick} />);
 };

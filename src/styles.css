@@ -1,4 +1,23 @@
 .App {
-  font-family: sans-serif;
-  text-align: center;
+	font-family: sans-serif;
+	text-align: center;
+}
+.App .form-group {
+	text-align: left;
+}
+.form-group .btn {
+	margin-top: 1rem;
+}
+.col {
+	text-align: center;
+	background-color: #eee;
+	border: 1px solid #ccc;
+}
+.col:first-child {
+	border-right: 0;
+}
+
+.col .btn {
+	float: left;
+	margin: 5px;
 }
