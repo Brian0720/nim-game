@@ -1,16 +1,18 @@
-import React from "react";
-import Button from "react-bootstrap/Button";
+import React from 'react';
+import Button from 'react-bootstrap/Button';
 
-export const Stone = ({ id, label, variant, disabled = false, onClick }) => {
-  const onButtonClick = () => {
-    if (onClick) {
-      onClick(id);
-    }
-  };
+export const Stone = ({ stoneData, onClick }) => {
+	const { label, variant, disabled = false } = stoneData;
 
-  return (
-    <Button variant={variant} onClick={onButtonClick} disabled={disabled}>
-      {label}
-    </Button>
-  );
+	const onButtonClick = () => {
+		if (onClick) {
+			onClick(stoneData);
+		}
+	};
+
+	return (
+		<Button variant={variant} disabled={disabled} onClick={onButtonClick}>
+			{label}
+		</Button>
+	);
 };
